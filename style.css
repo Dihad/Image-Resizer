@@ -1,0 +1,135 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: hsl(0, 0%, 8%); /* Off-black */
+}
+
+.wrapper {
+  width: 450px;
+  height: 288px;
+  padding: 30px;
+  background: hsl(0, 0%, 15%); /* Darker-grey */
+  border-radius: 9px;
+  transition: height 0.2s ease;
+}
+
+.wrapper.active {
+  height: 537px;
+}
+
+.wrapper .upload-box {
+  height: 225px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed hsl(0, 0%, 44%); /* Smokey-grey */
+}
+
+.wrapper.active .upload-box {
+  border: none;
+}
+
+.upload-box p {
+  font-size: 1.06rem;
+  margin-top: 20px;
+  color: hsl(0, 0%, 94%); /* Off-white */
+}
+
+.wrapper.active .upload-box p {
+  display: none;
+}
+
+.wrapper.active .upload-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.wrapper .content {
+  opacity: 0;
+  margin-top: 28px;
+  pointer-events: none;
+}
+
+.wrapper.active .content {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+.content .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .row .column {
+  width: calc(100% / 2 - 15px);
+}
+
+.row .column label {
+  font-size: 1.06rem;
+  color: hsl(0, 0%, 94%); /* Off-white */
+}
+
+.sizes .column input {
+  width: 100%;
+  height: 49px;
+  outline: none;
+  margin-top: 7px;
+  padding: 0 15px;
+  font-size: 1.06rem;
+  border-radius: 4px;
+  border: 1px solid hsl(0, 0%, 44%); /* Smokey-grey */
+  background: hsl(0, 0%, 20%); /* Dark-grey */
+  color: hsl(0, 0%, 94%); /* Off-white */
+}
+
+.sizes .column input:focus {
+  padding: 0 14px;
+  border: 2px solid hsl(30, 100%, 50%); /* New orange color */
+}
+
+.content .checkboxes {
+  margin-top: 20px;
+}
+
+.checkboxes .column {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxes .column input {
+  width: 17px;
+  height: 17px;
+  margin-right: 9px;
+  accent-color: hsl(30, 100%, 50%); /* New orange color */
+}
+
+.content .download-btn {
+  width: 100%;
+  color: hsl(0, 0%, 100%); /* White */
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.06rem;
+  border-radius: 5px;
+  padding: 15px 0;
+  margin: 30px 0 10px;
+  background: hsl(30, 100%, 50%); /* New orange color */
+  text-transform: uppercase;
+}
